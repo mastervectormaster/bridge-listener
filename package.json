@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/ws.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "alchemy-sdk": "^2.2.1",
+    "dotenv": "^16.0.3",
     "ethers": "^5.7.2"
   }
 }
