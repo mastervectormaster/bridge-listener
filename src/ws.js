@@ -33,6 +33,9 @@ alchemy.ws.on(filter, (data) => {
     data.topics
   );
 
+  console.log(recipient)
+  console.log(amount.toNumber())
+
   exec(
     `blockxd tx bridge sent-to-blockx ${recipient} ${amount.toNumber()}abcx --from bridge --chain-id blockx_12345-1`,
     (error, stdout, stderr) => {
