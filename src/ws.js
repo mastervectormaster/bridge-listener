@@ -34,10 +34,10 @@ alchemy.ws.on(filter, (data) => {
   );
 
   console.log(recipient)
-  console.log(amount.toNumber())
+  console.log(amount.toString())
 
   exec(
-    `blockxd tx bridge sent-to-blockx ${recipient} ${amount.toNumber()}abcx --from bridge --chain-id blockx_12345-1`,
+    `blockxd tx bridge sent-to-blockx ${recipient} ${amount.toString()}abcx --from bridge --chain-id blockx_12345-1`,
     (error, stdout, stderr) => {
       if (error) {
         console.log(`error: ${error.message}`);
