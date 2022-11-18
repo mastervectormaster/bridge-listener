@@ -39,6 +39,12 @@ alchemy.ws.on(filter, (data) => {
   exec(
     `blockxd tx bridge sent-to-blockx ${recipient} ${amount.toString()}abcx --from bridge --chain-id blockx_12345-1`,
     (error, stdout, stderr) => {
+      console.log('---------- errors -------------')
+      console.log(error)
+      console.log('---------- stdout -------------')
+      console.log(stdout)
+      console.log('---------- stderr -------------')
+      console.log(stderr)
       if (error) {
         console.log(`error: ${error.message}`);
         return;
