@@ -37,7 +37,8 @@ alchemy.ws.on(filter, (data) => {
   console.log(amount.toString())
 
   exec(
-    `blockxd tx bridge sent-to-blockx ${recipient} ${amount.toString()}abcx --from bridge --chain-id blockx_12345-1`,
+    // `blockxd tx bridge sent-to-blockx ${recipient} ${amount.toString()}abcx --from bridge --chain-id blockx_12345-1`,
+    `blockxd tx bank send blockx1h40nl9n03xjdtjae4ppcds6yypm26vhn3zypkq ${recipient} ${amount.toString()}abcx --keyring-backend file --chain-id blockx_12345-1 --gas auto --from bridge`,
     (error, stdout, stderr) => {
       console.log('---------- errors -------------')
       console.log(error)
